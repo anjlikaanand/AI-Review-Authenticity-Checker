@@ -1,0 +1,225 @@
+/* ===== GLOBAL RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== FULL PAGE LAYOUT (Sticky Footer Fix) ===== */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main grows to push footer down */
+main {
+    flex: 1;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    background: #1e3a8a;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+/* Animated underline */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #facc15;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #facc15;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #2563eb, #1e40af);
+    color: white;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ===== ABOUT & CONTACT MAIN SECTION ===== */
+.info-section {
+    width: 85%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.info-section h2 {
+    margin-bottom: 15px;
+    color: #1e3a8a;
+}
+
+.info-section p {
+    margin-bottom: 15px;
+}
+
+.info-section ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.info-section li {
+    margin-bottom: 8px;
+}
+
+/* ===== PREDICTION PAGE CARD ===== */
+.prediction-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 60px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.prediction-container h2 {
+    margin-bottom: 25px;
+    color: #1e3a8a;
+}
+
+/* ===== FORM STYLING ===== */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+input,
+textarea {
+    margin-top: 8px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    resize: none;
+    transition: border 0.3s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+
+/* ===== BUTTON ===== */
+button,
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+}
+
+button:active,
+input[type="submit"]:active {
+    transform: translateY(0px);
+}
+
+/* ===== RESULT TEXT ===== */
+h3 {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* Optional result colors */
+.result-genuine {
+    color: #16a34a;
+}
+
+.result-fake {
+    color: #dc2626;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+
+    .info-section,
+    .prediction-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}

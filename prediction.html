@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Review Authenticity Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+    <a href="index.html">About</a>
+    <a href="prediction.html">Prediction</a>
+    <a href="contact.html">Contact</a>  
+  </nav>
+   <main>
+  <div class="prediction-container">
+      <h2>AI Review Authenticity Checker</h2>
+
+      <form method="POST" action="/predict">
+          <textarea name="review" placeholder="Paste your review here..."></textarea>
+          <input type="submit" value="Check Review">
+      </form>
+
+      {% if prediction %}
+          <h3>Result: {{ prediction }}</h3>
+      {% endif %}
+  </div>
+  <footer>
+    <p>&copy; Made by Anjlika Anand</p>
+  </footer>
+</main>
+</body>
+</html>
